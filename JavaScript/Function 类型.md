@@ -137,3 +137,54 @@ outer();
 ```
 
 ECMAScript 中的函数是对象，因此函数拥有属性和方法。每个函数都包含两个属性：length 和 prototype，length表示函数参数的个数，es5 中，prototype是不可枚举的。
+
+每个函数都包含两个非继承而来的方法：apply 和 call
+
+JavaScript 提供了包装类型：Number，String，Boolean。实际上在读取一个基本类型时，后台就会创建一个相应的基本包装类型的对象。
+
+``` js
+var s = 'some text';
+console.log(s.substr(2));
+```
+
+在执行第二行访问s的时候，过程处于一种读取模式，后台会自动完成一下操作：
+
+1. 创建一个 String 类型的实例
+2. 在实例上调用指定的方法
+3. 销毁这个实例
+
+使用 new 创建的实例，在执行流离开当前作用域之前一直保存在内存中。而自动创建的包装类型对象，只存在于代码的执行瞬间，然后立即被销毁。
+
+Object 构造函数也会像工厂方法一样，根据传入值的类型返回相应基本包装类型
+
+使用 new 调用基本包装类型的构造函数，与直接调用同名的转型函数是不一样的。
+
+``` js
+var value = '25';
+var n1 = Number(value); //转型函数
+console.log(typeof n1);
+
+var n2 = new Number(value); //构造函数
+console.log(typeof n2);
+```
+
+## Boolean 类型
+
+布尔表达式中的对象会被转成 true
+
+``` js
+var b = new Boolean(false);
+console.log(b && true); //true
+```
+
+## Number 类型
+
+与 Boolean 类型一样，Number 类型也重写了 valueOf()、toLocaleString()、toString() 方法。可以为 toString() 方法传递一个表示基数的参数，告诉它返回几进制数值的字符串形式。
+
+toFixed() 方法会按照指定的小数位返回数值的字符串表示。toExponential() 返回以指数表示法表示的数值的字符串形式。
+
+``` js
+var num = 10;
+console.log(num.toFixed(2)); //'10.00'
+console.log(num.toExponential(1)); //'1.0e+1'
+```
