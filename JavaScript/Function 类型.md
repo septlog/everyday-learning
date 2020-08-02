@@ -188,3 +188,9 @@ var num = 10;
 console.log(num.toFixed(2)); //'10.00'
 console.log(num.toExponential(1)); //'1.0e+1'
 ```
+
+如果想得到表示某个数值的最合适的格式，就应该使用 toPrecision() 方法。
+
+## String 类型
+
+valueOf(), toLocaleString(), toString(), charAt(), charCodeAt(), concat(), slice(), substr(), substring(), indexOf(), lastIndexOf(), trim(), toLowerCase(), toLocaleLowerCase(), toUpperCase(), toLocaleUpperCase()
