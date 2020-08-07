@@ -138,7 +138,9 @@ outer();
 
 ECMAScript 中的函数是对象，因此函数拥有属性和方法。每个函数都包含两个属性：length 和 prototype，length表示函数参数的个数，es5 中，prototype是不可枚举的。
 
-每个函数都包含两个非继承而来的方法：apply 和 call
+### 每个函数都包含两个非继承而来的方法：apply 和 call
+
+每个函数的 toLocaleString() 和 toString() 方法始终返回函数的代码，valueOf() 方法也只返回函数的代码。
 
 JavaScript 提供了包装类型：Number，String，Boolean。实际上在读取一个基本类型时，后台就会创建一个相应的基本包装类型的对象。
 
