@@ -11,3 +11,5 @@ windows 垃圾，macos 又赢了。
 没用过 macos，但就是觉得 macos sucks
 
 fuck apple
+
+天灭 macos
