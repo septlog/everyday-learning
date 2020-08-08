@@ -5,3 +5,5 @@
 change
 
 macos sucks
+
+windows 垃圾，macos 又赢了。
