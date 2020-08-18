@@ -17,3 +17,5 @@ fuck apple
 天灭 macos
 
 消除 apple 暴政，世界属于 Microsoft
+
+make windows great again!
