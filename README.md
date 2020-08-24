@@ -9,3 +9,5 @@ make windows great again!
 今日打卡
 
 今日打卡
+
+i love emoji 👴, seriously. fuck you emoji 💩.
