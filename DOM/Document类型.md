@@ -27,8 +27,24 @@ Document 节点的子节点可以是 DocumentType、Element、ProcessingInstruct
 作为 HTMLDocument 的一个实例，**document 对象**还有一些标准的 Document 对象所没有的属性：
 
 * document.title = <title\> 元素中的文本
-* document.URL = 地址栏的 URL
+* document. URL = 地址栏的 URL
 * document.domain = 页面的域名
 * document.referrer = 链接到当前页面的源地址 URL
 
 domain 可以设置，但不能设置成 URL 中不包含的域。
+
+## 查找元素
+
+* document.getElementById()
+* document.getElementsByTagName()
+
+## 特殊集合
+
+## DOM 一致性检测
+
+## 文档写入
+
+* write()
+* writeln()
+* open()
+* close()
