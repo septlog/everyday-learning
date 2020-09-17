@@ -61,3 +61,21 @@ XHR 对象提供了操作两种头部（请求头部和响应头部）的方法�
 * Host：发出请求的页面所在的域
 * Referer：发出请求的页面 URI。（HTTP 规范将这个头部字段拼写错了，正确的拼法应该是 referrer，但是将错就错了）。
 * User-Agent：浏览器的用户代理字符串。
+
+使用 setRequestHeader() 方法可以设置自定义的请求头部信息。必须在调用 open() 方法之后且调用 send() 方法之前调用 setRequestHeader()。
+
+有的浏览器允许开发人员重写默认的头部信息。
+
+getResponseHeader() 和 getAllResponseHeader() 方法。
+
+## GET 请求
+
+对于 xhr 而言，位于传入 open() 方法的 URL 末尾的查询字符串必须经过正确的编码才行。
+
+查询字符串中的每个参数的名称和值都必须使用 encodingURIComponent() 进行编码。
+
+## POST 请求
+
+通常用于向服务器发送应该被保存的数据。POST 请求应该把数据作为请求的主体提交，而 GET 请求传统上并不是这样。
+
+默认情况下，服务器对 POST 请求和提交 Web 表单的请求并不会一视同仁。但是可以使用 XHR 来模仿表单提交：将 Content-Type 头部信息设置为 application/x-www-form-urlencoded，其次是以适当的格式创建一个字符串。
