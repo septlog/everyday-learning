@@ -72,3 +72,7 @@ const 的作用域与 let 命令相同。不提升，存在 TDZ，不可重复�
 顶层对象，在浏览器中指的是 window 对象，在 Node 中指的是 global 对象。
 
 ES6 规定，var 和 function 命令声明的全局变量依旧是顶层变量的属性，而 let，const，class 声明的全局变量不属于顶层变量。
+
+## globalThis 对象
+
+不同的环境有不同的顶层对象，ES2020 在语言标准的层面，引入 globalThis 作为顶层对象，也就是说，任何环境下，globalThis 都是存在的，都可以从它拿到顶层对象，指向全局环境下的 this。
