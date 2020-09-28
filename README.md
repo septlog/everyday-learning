@@ -2,4 +2,4 @@
 
 This is my everyday learning.
 
-just some notes maybe (笑).
+just some notes.
